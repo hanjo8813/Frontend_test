@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>11주차 js기본실습</title>
+    <script>
+        // 웹페이지에서 디버깅하기
+        // 1. 크롬에서 ctrl+shift+i 누르면 소스 창뜸
+        // 2. sources 메뉴 클릭 후 브레이크 포인트 걸기
+        // 3. 화살표 버튼 클릭후 디버깅.
+        
+        // 구구단 함수만들기
+        function gugudan(n)
+        {
+            // isFinite --> 숫자일때 true , isNan --> 숫자 아닐때 true
+            if(isFinite(n)==false || n<1 || n>9)
+            {
+                alert("잘못입력");
+                return;
+            }
+            for(var i=1; i<=n; i++)
+                document.write(i + " * " +n+ " = " + i*n + "<br>");
+            return;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        var size = prompt("사이즈 입력", "size");
+        document.write("<p style='font-size:" + size + "'>입력된 폰트사이즈 : " + size + "</p>");
+
+        // 1부터 입력 사이즈까지 증가.
+        for (var i = 1; i <= size; i++) {
+            document.write("<span style='font-size: " + i + "'> " + i + "</span> <br>")
+        }
+        // ---------------------------------------------------------------------
+
+        // prompt로 입력받으면 문자열형태임.
+        var n = prompt("몇 단을 출력할까요?","");
+        gugudan(parseInt(n));
+    </script>
+</body>
+
+</html>
