@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <style>
+    fieldset{width:300px;}
+  </style>
+</head>
+
+<body>
+	<h3>생일축하합니다</h3>
+  당신의 생일은 1996년 4월 2일입니다.<br>
+  틀리면 수정하시고, 받고 싶은 선물을 입력하세요
+	<hr><br>
+  <label>생일&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" value="1996-04-02"> </label>
+  <br><br>
+  <fieldset>
+    <legend>받고싶은 선물</legend>
+    <label> 1순위 : <input type="text"> </laber><br>
+    <label for="앙">2순위 : </label>
+    <input type="text" id="앙"><br>
+    3순위 : <input type="text"><br>
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>받고싶은 선물의 색상</legend>
+    색 선택 : <input type="color" value="#FF0000" onchange="document.body.style.color=this.value">
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>받고싶은 선물의 가격대</legend>
+    10만원<input type="range" min="0" max="100" list="price">100만원
+    <datalist id="price">
+      <option value="10">
+      <option value="50">
+      <option value="90">
+    </datalist>
+  </fieldset>
+</body>
+</html>
