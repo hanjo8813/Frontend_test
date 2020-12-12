@@ -1,9 +1,493 @@
-<html>
+<!doctype html>
+<html lang="ko">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+    <meta name="naver-site-verification" content="1b835d373aa3a5b24266532ed5253878fd875c50" />
+    <title>임애견훈련학교</title>
+    <link rel="stylesheet" href="http://www.dognspace.com/css/default.css?ver=161020">
+    <link rel="stylesheet" href="http://www.dognspace.com/skin/latest/basic/style.css?ver=161020">
+    <!--[if lte IE 8]>
+<script src="http://www.dognspace.com/js/html5.js"></script>
+<![endif]-->
+    <script>
+        // 자바스크립트에서 사용하는 전역변수 선언
+        var g5_url = "http://www.dognspace.com";
+        var g5_cmm_url = "http://www.dognspace.com/dnad/common/pc";
+        var g5_bbs_url = "http://www.dognspace.com/bbs";
+        var g5_is_member = "";
+        var g5_is_admin = "";
+        var g5_is_mobile = "";
+        var g5_bo_table = "";
+        var g5_sca = "";
+        var g5_editor = "";
+        var g5_cookie_domain = "";
+    </script>
+    <script src="http://www.dognspace.com/js/jquery-1.8.3.min.js"></script>
+    <script src="http://www.dognspace.com/js/jquery.menu.js?ver=161020"></script>
+    <script src="http://www.dognspace.com/js/common.js?ver=161020"></script>
+    <script src="http://www.dognspace.com/js/wrest.js?ver=161020"></script>
+    <script type="text/javascript" src="http://www.dognspace.com/dnad/js/common.js"></script>
+    <script type="text/javascript" src="http://www.dognspace.com/dnad/js/menuAllControll.js"></script>
+    <script type="text/javascript" src="http://www.dognspace.com/dnad/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="http://www.dognspace.com/dnad/js/menuAllControll.js"></script>
+    <script type="text/javascript" src="http://www.dognspace.com/dnad/js/edit_jquery.js"></script>
+    <script type="text/javascript" src="http://www.dognspace.com/dnad/js/form.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var $body = $(document.body), //자주 사용하기에 캐시되게 변수에 넣어준다
+                $top = '';
+
+            $top = $('<div>') //div 를 만들고 
+                .addClass('top') //top className을 주고
+                .hide() //처음에는 숨겨둔다
+                .click(function () {  // 클릭이 이벤트 할당
+                    $body.animate({ scrollTop: 0 }); //animation효과로 scollTop=0으로 이동
+                    $('html,body').animate({ scrollTop: 0 }, 600);//ie7용
+                })
+                .appendTo($body); // body에 top을 넣는다
+
+            //윈도우의 스크롤위치로 위로가기 버튼을 보여줘야기에 핸들러 작성
+            $(window).scroll(function () {
+
+                var y = $(this).scrollTop();
+
+                if (y >= 100) {
+                    $top.fadeIn();
+                }
+                else {
+                    $top.fadeOut();
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
+
+    <!-- 상단 시작 { -->
+    <div id="wrap">
+
+        <!--Header-->
+        <div id="header_wrap">
+            <div class="header">
+                <div class="header_b">
+                    <h1 class="logo"><a href="http://www.dognspace.com/"><img
+                                src="http://www.dognspace.com/dnad/common/pc/img/logo.png" alt="" /></a></h1>
+                    <div id="navigation">
+                        <ul class="gnb">
+                            <li class="gnb1"><a href="http://www.dognspace.com?doc_id=1_1"><img
+                                        src="http://www.dognspace.com/dnad/common/pc/img/navi_icon01.png"
+                                        alt="" />&nbsp;&nbsp;학교소개</a>
+                                <div class="gnbdh1">
+                                    <ul>
+                                        <li class="sub1"><a href="http://www.dognspace.com?doc_id=1_1">인사말</a></li>
+                                        <li class="sub2"><a href="http://www.dognspace.com?doc_id=1_2">연혁</a></li>
+                                        <li class="sub3"><a href="http://www.dognspace.com?doc_id=1_3">학교전경</a></li>
+                                        <li class="sub4"><a href="http://www.dognspace.com?doc_id=1_4">오시는길</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="gnb2"><a href="http://www.dognspace.com?doc_id=2_1"><img
+                                        src="http://www.dognspace.com/dnad/common/pc/img/navi_icon02.png"
+                                        alt="" />&nbsp;&nbsp;교육과정</a>
+                                <div class="gnbdh2">
+                                    <ul>
+                                        <li class="sub1"><a href="http://www.dognspace.com?doc_id=2_1">애견훈련</a></li>
+                                        <li class="sub2"><a href="http://www.dognspace.com?doc_id=2_2">방문훈련</a></li>
+                                        <li class="sub3"><a href="http://www.dognspace.com?doc_id=2_3">훈련사</a></li>
+                                        <li class="sub4"><a href="http://www.dognspace.com?doc_id=2_4">애견호텔</a></li>
+                                        <li class="sub5"><a href="http://www.dognspace.com?doc_id=2_5">교육비용</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="gnb8"><a href="http://www.dognspace.com?doc_id=8_1"><img
+                                        src="http://www.dognspace.com/dnad/common/pc/img/navi_icon08.png"
+                                        alt="" />&nbsp;&nbsp;애견놀이터</a>
+                                <div class="gnbdh8">
+                                    <ul>
+                                        <li class="sub1"><a href="http://www.dognspace.com?doc_id=8_1">시설안내</a></li>
+                                        <li class="sub2"><a href="http://www.dognspace.com?doc_id=8_2">이용요금안내</a></li>
+                                        <li class="sub3"><a href="http://www.dognspace.com?doc_id=8_3">오시는 길</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="gnb3"><a href="http://www.dognspace.com/bbs/board.php?bo_table=gallery"><img
+                                        src="http://www.dognspace.com/dnad/common/pc/img/navi_icon03.png"
+                                        alt="" />&nbsp;&nbsp;포토갤러리</a>
+                                <div class="gnbdh3">
+                                    <ul>
+                                        <li class="sub1"><a
+                                                href="http://www.dognspace.com/bbs/board.php?bo_table=gallery">포토갤러리</a>
+                                        </li>
+                                        <li class="sub2"><a
+                                                href="http://www.dognspace.com/bbs/board.php?bo_table=gallery2">훈련사진</a>
+                                        </li>
+                                        <li class="sub3"><a
+                                                href="http://www.dognspace.com/bbs/board.php?bo_table=gallery3">동영상</a>
+                                        </li>
+                                        <li class="sub4"><a
+                                                href="http://www.dognspace.com/bbs/board.php?bo_table=gallery4">호텔견갤러리</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="gnb4"><a href="http://www.dognspace.com/bbs/board.php?bo_table=free"><img
+                                        src="http://www.dognspace.com/dnad/common/pc/img/navi_icon04.png"
+                                        alt="" />&nbsp;&nbsp;커뮤니티</a>
+                                <div class="gnbdh4">
+                                    <ul>
+                                        <li class="sub1"><a
+                                                href="http://www.dognspace.com/bbs/board.php?bo_table=free">질문과 답변</a>
+                                        </li>
+                                        <li class="sub2"><a
+                                                href="http://www.dognspace.com/bbs/board.php?bo_table=notice">공지사항</a>
+                                        </li>
+                                        <!--<li class="sub3"><a href="http://www.dognspace.com?doc_id=4_3"></a></li> 
+								<li class="sub3"><a href="http://www.dognspace.com?doc_id=4_4"></a></li> -->
+                                    </ul>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="quick_menu jbmenu">
+                <div class="quick01">
+                    <h3><img src="http://www.dognspace.com/dnad/common/pc/img/quick_icon01.png" alt="" />&nbsp;고객센터</h3>
+                    <p><img src="http://www.dognspace.com/dnad/common/pc/img/quick_num.png" alt="" /></p>
+                </div>
+                <div class="quick02">
+                    <h3><img src="http://www.dognspace.com/dnad/common/pc/img/quick_icon02.png" alt="" /></h3>
+                    <p>임애견훈련학교</p>
+                </div>
+                <a href="https://www.facebook.com/profile.php?id=100006585453569" target="_blank">
+                    <div class="quick03">
+                        <h3>바로가기</h3>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/yim7088/?hl=ko" target="_blank">
+                    <div class="quick04">
+                        <h3>바로가기</h3>
+                    </div>
+                </a>
+                <a href="https://animalwa.org/" target="_blank">
+                    <div class="quick05"><img src="http://www.dognspace.com/dnad/common/pc/img/quick_share.jpg"
+                            alt="" /></div>
+                </a>
+
+            </div>
+
+
+            <!--// Header-->
+
+            <!-- head sub 페이지 시작 -->
+            <!--Sub Page -->
+            <!-- head sub 페이지 끝-->
+            <!-- 팝업레이어 시작 { -->
+            <div id="hd_pop">
+                <h2>팝업레이어 알림</h2>
+
+                <span class="sound_only">팝업레이어 알림이 없습니다.</span>
+            </div>
+
+            <script>
+                $(function () {
+                    $(".hd_pops_reject").click(function () {
+                        var id = $(this).attr('class').split(' ');
+                        var ck_name = id[1];
+                        var exp_time = parseInt(id[2]);
+                        $("#" + id[1]).css("display", "none");
+                        set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
+                    });
+                    $('.hd_pops_close').click(function () {
+                        var idb = $(this).attr('class').split(' ');
+                        $('#' + idb[1]).css('display', 'none');
+                    });
+                    $("#hd").css("z-index", 1000);
+                });
+            </script>
+            <!-- } 팝업레이어 끝 -->
+            <!-- 메인 페이지 시작 -->
+            <div id="main_wrap">
+                <div class="mv_wrap">
+                    <ul class="main_visual">
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/mv03.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/mv02.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/mv01.png" alt="" /></li>
+                        <li><a href="https://animalwa.org/" target="_blank"><img
+                                    src="http://www.dognspace.com/dnad/common/pc/img/mv04.png" alt="" /></a></li>
+                    </ul>
+                </div>
+
+                <script type="text/javascript">
+                    $('.main_visual').bxSlider({
+                        auto: true,
+                        mode: 'fade',
+                        speed: 1000,
+                        pause: 3000,
+                        controls: true,
+                        pager: false
+                    });  
+                </script>
+                <div class="main_p_w">
+                    <div class="main_program">
+                        <h3>교육과정<span>PROGRAM</span></h3>
+                        <ul>
+                            <li><a href="http://www.dognspace.com?doc_id=2_1">
+                                    <div class="img"><img
+                                            src="http://www.dognspace.com/dnad/common/pc/img/program01.png" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <p class="title">애견훈련</p>
+                                        <p class="info">사람과 애견이 함께 살아가는<br />
+                                            방법을 가르칩니다.<br />
+                                            예절교육, 배변훈련, 행동교정, 사회화<br />
+                                            훈련 등 일상생활에서 어려움을<br />
+                                            개선할 수 있는 훈련입니다.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="http://www.dognspace.com?doc_id=2_2">
+                                    <div class="img"><img
+                                            src="http://www.dognspace.com/dnad/common/pc/img/program02.png" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <p class="title">방문훈련</p>
+                                        <p class="info">경제적인 문제나 기타 여러가지 사정으로<br />
+                                            인해 애견을 훈련소에 맡길 힘들 상황이나<br />
+                                            훈련에 관심이 있어서 직접 훈련하고<br />
+                                            싶으신 분들을 위한 훈련입니다.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="http://www.dognspace.com?doc_id=2_3">
+                                    <div class="img"><img
+                                            src="http://www.dognspace.com/dnad/common/pc/img/program03.png" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <p class="title">훈련사교육</p>
+                                        <p class="info">훈련사(1등-3등), 마약탐지견,<br />
+                                            식품검역원, 사체탐지견
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="http://www.dognspace.com?doc_id=2_4">
+                                    <div class="img"><img
+                                            src="http://www.dognspace.com/dnad/common/pc/img/program04.png" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <p class="title">애견호텔</p>
+                                        <p class="info">여행, 출장, 명절 등으로 장·단기간 주인과<br />
+                                            떨어져 생활해야 할 때 애견 호텔에서<br />
+                                            보호하고 관리 합니다. </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main_c_w">
+                    <div class="main_community">
+                        <h3>커뮤니티<span>COMMUNITY</span></h3>
+                        <div class="qna">
+                            <h3>질문과 답변</h3>
+                            <ul>
+                                <li>
+                                    <!-- 자유게시판 최신글 시작 { -->
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=free&amp;wr_id=7543">애견훈련
+                                        문의드립니다.</a> </li>
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=free&amp;wr_id=7544">Re: 애견훈련
+                                        문의드립니다.</a> </li>
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=free&amp;wr_id=7539">방문훈련문의</a>
+                                </li>
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=free&amp;wr_id=7542">Re:
+                                        방문훈련문의</a> </li>
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=free&amp;wr_id=7536">출장 가정 방문훈련
+                                        문의드립니다.</a> </li>
+                                <!-- } 자유게시판 최신글 끝 -->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="notice">
+                            <h3>공지사항</h3>
+                            <ul>
+                                <li>
+                                    <!-- 공지사항 최신글 시작 { -->
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=notice&amp;wr_id=222">[공지]
+                                        2020년도 10월 자격…</a> </li>
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=notice&amp;wr_id=221">유기견 x
+                                        미용봉사자 x 모집 안…</a> </li>
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=notice&amp;wr_id=220">2021 크러프츠
+                                        퀄리파잉 자격증…</a> </li>
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=notice&amp;wr_id=219">2020 KSV
+                                        독일 셰퍼드 클럽…</a> </li>
+                                <li>
+                                    <a href="http://dognspace.com/bbs/board.php?bo_table=notice&amp;wr_id=218">2020년도 5월
+                                        자격시험 일정 …</a> </li>
+                                <!-- } 공지사항 최신글 끝 -->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cc_center">
+                            <h2><img src="http://www.dognspace.com/dnad/common/pc/img/cm_call.png" alt="" /> 고객센터</h2>
+                            <p><img src="http://www.dognspace.com/dnad/common/pc/img/cm_num.png" alt="" /></p>
+                            <h4>24시간 상담가능 / 연중무휴</h3>
+                        </div>
+                        <div class="money">
+                            <a href="http://www.dognspace.com?doc_id=2_5"><img
+                                    src="http://www.dognspace.com/dnad/common/pc/img/cm_banner.png" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main_sns">
+                    <div class="main_adr">
+                        <!-- * 카카오맵 - 지도퍼가기 -->
+                        <!-- 1. 지도 노드 -->
+                        <div id="daumRoughmapContainer1570700381449"
+                            class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                        <!--
+					2. 설치 스크립트
+					* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+				-->
+                        <script charset="UTF-8" class="daum_roughmap_loader_script"
+                            src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                        <!-- 3. 실행 스크립트 -->
+                        <script charset="UTF-8">
+                            new daum.roughmap.Lander({
+                                "timestamp": "1570700381449",
+                                "key": "vcv7",
+                                "mapWidth": "598",
+                                "mapHeight": "380"
+                            }).render();
+                        </script>
+                        <div class="adr_txt">
+                            <h3>주소 <span>경기도 파주시 광탄면 혜음로 345번지 </span></h3>
+                        </div>
+                    </div>
+                    <div class="sns_right">
+                        <div class="sns_fb"><a href="https://www.facebook.com/profile.php?id=100006585453569"
+                                target="_blank"><img src="http://www.dognspace.com/dnad/common/pc/img/facebook_ban.png"
+                                    alt="" /></a></div>
+                        <div class="sns_kt"><a href="#"><img
+                                    src="http://www.dognspace.com/dnad/common/pc/img/kakao_ban.png" alt="" /></a></div>
+                    </div>
+                </div>
+
+                <div class="main_insta">
+                    <h3> <img src="http://www.dognspace.com/dnad/common/pc/img/insta_icon.png"
+                            alt="" />&nbsp;&nbsp;&nbsp;@임애견훈련학교</h3>
+                    <ul>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img01.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img02.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img03.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img04.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img05.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img06.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img04.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img03.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img02.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img01.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img04.png" alt="" /></li>
+                        <li><img src="http://www.dognspace.com/dnad/common/pc/img/insta_img02.png" alt="" /></li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- } 메인 끝 -->
+
+
+
+            <!-- tail sub 페이지 시작 -->
+            <!-- tail sub 페이지 끝-->
+
+            <!-- 하단 시작 { -->
+            <!--Footer-->
+            <div id="footer_wrap">
+                <div class="footer_w">
+                    <div class="footer_left">
+                        <div class="footer_top">
+                            <ul>
+                                <li><a href="http://www.dognspace.com?doc_id=legal">법적고지</a><label>｜</label></li>
+                                <li><a href="http://www.dognspace.com?doc_id=privacy">개인정보처리방침</a><label>｜</label></li>
+                                <li><a href="http://www.dognspace.com?doc_id=1_4">오시는길</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_bottom">
+                            경기도 파주시 광탄면 혜음로 345번지 대표자 : 이재분 사업자등록번호: 127-31-17493<br />
+                            TEL : (대표전화) 031) 946-0876 / 010-6353-7088 Fax : 031) 941-6353<br />
+                            본 웹사이트는 이메일 주소가 무단수집되는 것을 거부하며, 위반시 [정보통신망법]에 의해 처벌됨을 유념하십시오.
+                        </div>
+                        <p class="copy">Copyright ⓒ 임애견훈련학교 all rights reserved</p>
+                    </div>
+
+                    <div class="footer_right">
+                        <p><img src="http://www.dognspace.com/dnad/common/pc/img/foot_logo.png" alt="" /></p>
+                        <p><img src="http://www.dognspace.com/dnad/common/pc/img/foot_num.png" alt="" /></p>
+                        <p class="txt">24시간 상담가능 / 연중무휴</p>
+                    </div>
+                </div>
+            </div>
+            <!--//Footer-->
+
+        </div>
+        <!--// wrap -->
+
+        <!-- } 하단 끝 -->
+
+        <script>
+            $(function () {
+                // 폰트 리사이즈 쿠키있으면 실행
+                font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+            });
+        </script>
+
+
+
+        <!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+        <!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
 </body>
 
 </html>
