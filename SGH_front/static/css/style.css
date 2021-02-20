@@ -204,10 +204,9 @@ body:not(.device-touch) .bg_btn_style {
 
 .container {
     text-align:center;
-    padding-left : 17rem;
-    padding-right : 17rem;
+    padding-left : 10rem;
+    padding-right : 10rem;
 }
-
 
 .login_title{
     text-align: center;    
@@ -286,12 +285,18 @@ body:not(.device-touch) .bg_btn_style {
     margin-right : 1rem;
 } 
 
-.login_btn:hover{
+.login_btn:hover,
+.regi_btn:hover,
+.go_result_btn:hover
+{
     background-color: #FEC034;
     font-weight: bold;
 }
 
-body:not(.device-touch) .login_btn {
+body:not(.device-touch) .login_btn,
+body:not(.device-touch) .regi_btn,
+body:not(.device-touch) .go_result_btn
+{
     transition: background-color .2s linear;
     -webkit-transition: background-color .2s linear;
 }
@@ -398,14 +403,201 @@ body:not(.device-touch) .login_btn {
 
 /* ---------------------------------( register )---------------------------------------- */
 
-.regi_container {
-    text-align:center;
-    padding-left : 30rem;
-    padding-right : 30rem;
-    background-color:red;
+
+.regi_box {
+    margin: 0 auto; 
+    width: 45%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
 }
 
+.regi_box label{
+    text-align: left;
+    font-size:1.1rem;
+    margin-top: 2rem;
+}
 
+.regi_box input {
+    font-size: 1rem;
+    background: none;
+    border:0.01px solid rgb(216, 216, 216);
+    padding: 10px 10px 10px 15px;
+    margin-top:0.5rem;
+    outline: 0;
+    height:1.5rem;
+}
+
+.regi_box input::placeholder {
+    color:rgb(143, 143, 143);
+}
+
+.regi_box select{
+    font-size: 1rem;
+    background: none;
+    border:0.01px solid rgb(216, 216, 216);
+    padding: 0px 10px 0px 10px;
+    margin-top:0.5rem;
+    outline: 0;
+    height:2.8rem;
+}
+
+.regi_btn{
+    background: rgb(164, 26, 55);
+    width:15%;  
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    margin-top: 1.5rem;
+    border-radius: 3px;
+    padding:0.7rem;
+    cursor: pointer;
+    outline: 0;
+    margin-top:2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* ---------------------------------( mypage 이동 버튼)---------------------------------------- */
+
+.go_result_wrap{
+    margin-top:1.5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.go_result_box{
+    text-align: center;
+    width:13%;
+}
+
+.go_result_text{
+    font-size:4rem;
+}
+
+.go_result_btn{
+    background: rgb(164, 26, 55);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding:0.7rem 1rem 0.7rem 1rem;
+    cursor: pointer;
+    outline: 0;
+}
+
+/* ---------------------------------( mypage 박스 )---------------------------------------- */
+
+.my_box_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top:1.5rem;
+    padding-left : 12rem;
+    padding-right : 12rem;
+}
+
+.my_box{
+    display: flex;
+    flex-direction: column;
+    width: 28rem;
+    height: 17rem;
+    padding:2.5rem;
+    margin: 1rem 1rem 1rem;
+    border:1px solid rgb(216, 216, 216);
+    background-color: white;
+    font-size:1rem;
+}
+
+.my_box_title{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    font-size:1.4rem;
+    font-weight: bold;
+}
+
+.my_box_title i{
+    margin-right:1rem;
+    color:rgb(136, 136, 136);
+}
+
+.my_box_mod_btn{
+    float:left;
+    background: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 0.001px solid rgb(160, 160, 160);
+    padding:0.5rem;
+    cursor: pointer;
+    outline: 0;
+}
+
+.my_box hr,
+.my_box_grade hr{
+    width:100%;
+    border-top: 0.001px solid rgb(216, 216, 216);
+    border-bottom: 0.001px solid white;
+    margin-top:1rem;
+    margin-bottom:1.3rem;
+}
+
+.my_box table{
+    font-size:1.05rem;
+}
+
+.my_box tr{
+    height:2.7rem;
+}
+
+.my_box_table_1st_td{
+    width:35%;
+    font-weight: bold;
+}
+
+/* ---------------------------------( mypage 기이수성적 )---------------------------------------- */
+
+
+.my_box_grade{
+    display: flex;
+    flex-direction: column;
+    width: 63rem;
+    height: auto;
+    padding:2.5rem;
+    margin: 1rem 1rem 4rem;
+    border:1px solid rgb(216, 216, 216);
+    background-color: white;
+}
+
+.grade_table {
+    width: 90%;
+    text-align: center;
+    margin:0 auto;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+.grade_table_th {
+    font-size: 1rem;
+    height: 2.5rem;
+    background-color: #f8f8f8;
+    border-right :1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+
+.grade_table_td {
+    font-size: 0.9rem;
+    height: 2rem;
+    border-right :1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
 
 
 
@@ -428,7 +620,6 @@ body:not(.device-touch) .login_btn {
     max-width: 100%;
     height: 100%;
     background-color: rgb(248,249,250);
-
 }
 
 .rcontainer {
@@ -439,7 +630,6 @@ body:not(.device-touch) .login_btn {
     width: 100%;
     height: 100%;
     background-color: rgb(248,249,250);
-
 }
 
 .resultbox {
@@ -805,6 +995,18 @@ strong {
     height: auto;
 }
 
+.update_modal_content{
+    text-align: center;
+    background-color: #fefefe;
+    border-radius: 5px;
+    margin: 5% auto;
+    padding: 2.5rem;
+    border: 1px solid #888;
+    width: 60%;
+    height: auto;
+}
+
+
 .modal_div {
     padding: 1rem;
     display : flex;
@@ -829,7 +1031,7 @@ strong {
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 

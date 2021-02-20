@@ -47,7 +47,6 @@
 
 <!----------------------------------------------- block content -------------------------------------------------------------->
 
-<!-- 처음 타이틀 -->
 <div class="gray_sec">
     <div class="container">
         <div style="font-size:4rem;">
@@ -60,14 +59,55 @@
 
 <!-- 입력란 -->
 <div class="white_sec">
-    <div class="regi_container">
-        <div style="background-color: blue;">
-            dd
-        </div>
-        
+    <div class="container">
+        <form action="#" method="post">
+            {% csrf_token %}
+            <div class="regi_box">
+                <!-- 이미 입력된 곳-->
+                <label>이름</label>
+                <input type="text" name="name" placeholder='한재원' style="background-color:rgb(248,249,250);" disabled>
+
+                <label>학과</label>
+                <input type="text" name="major" placeholder='디지털콘텐츠' style="background-color:rgb(248,249,250);" disabled>
+
+                <!-- 학부일 경우 -->
+                <select id="department" name="eng">
+                    <option value="x" selected>-- 선택 --</option>
+                    <option value="">스마트기기전공</option>
+                    <option value="">무인이동체전공</option>
+                </select>
+
+                <label>학번</label>
+                <input type="text" name="student_id" placeholder='15011187' style="background-color:rgb(248,249,250);" disabled>
+
+                <label>전공상태</label>
+                <select name="major_status">
+                    <option value="x" selected>해당없음</option>
+                    <option value="link">연계전공</option>
+                    <option value="dual">복수전공</option>
+                </select>
+
+                <label>영어인증</label>
+                <select onclick="pop_score()" id="eng" name="eng">
+                    <option value="x" selected>해당없음</option>
+                    <option value="toeic">TOEIC</option>
+                    <option value="ibt">IBT</option>
+                    <option value="teps">TEPS</option>
+                    <option value="opic">OPIc Intermediate</option>
+                    <option value="toeic_sp">TOEIC Speaking</option>
+                </select>
+                <input id="eng_score" style="display:none" type="text" name="eng_score" placeholder='점수'>
+
+                <label>비밀번호</label>
+                <input type="text" name="id">
+
+                <label>비밀번호 재확인</label>
+                <input type="text" name="id">
+            </div>
+            <input onclick='' type='submit' class='regi_btn' value='가입하기'>
+        </form>
     </div>
 </div>
-        
     
 <!----------------------------------------------- block content -------------------------------------------------------------->
 
@@ -92,6 +132,20 @@
     </footer>
 
 </body>
+
+<script>
+    function pop_score(){
+        var eng_box = document.getElementById('eng');
+        var eng_ind = document.getElementById("eng").options.selectedIndex;
+        if(eng_box.options[eng_ind].value !== "x")
+        {
+            document.getElementById('eng_score').style.display = "block";
+        }
+        else{
+            document.getElementById('eng_score').style.display = "none";
+        }
+    }
+</script>
 
 
 </html>
