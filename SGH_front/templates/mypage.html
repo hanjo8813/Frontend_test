@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
 
     <title>Please Graduate</title>
+
+    
 </head>
 
 
@@ -68,11 +70,10 @@
     <div class="white_sec">
         <div class="my_box_wrap">
             <div class="my_box">
-
                 <!-- 대휴칼 정보 박스 -->
                 <div class="my_box_title">
                     <div><i class="fas fa-user"></i>내 정보</div>
-                    <button class="my_box_mod_btn">업데이트</button>
+                    <button id='b1' class="my_box_mod_btn">업데이트</button>
                 </div>
                 <hr>
                 <table>
@@ -99,7 +100,7 @@
             <div class="my_box">
                 <div class="my_box_title">
                     <div><i class="fas fa-book"></i>전공상태 및 영어인증</div>
-                    <button class="my_box_mod_btn">수정하기</button>
+                    <button id='b2' class="my_box_mod_btn">수정하기</button>
                 </div>
                 <hr>
                 <table>
@@ -115,7 +116,7 @@
                 <hr style="margin-top:2.8rem;">
                 <div class="my_box_title">
                     <div><i class="fas fa-key"></i>비밀번호 변경</div>
-                    <button class="my_box_mod_btn">변경하기</button>
+                    <button id='b3' class="my_box_mod_btn">변경하기</button>
                 </div>
             </div>
 
@@ -124,7 +125,7 @@
                 <div class="my_box_title">
                     <div></div>
                     <div style="margin-left:4.5rem;">내 기이수과목</div>
-                    <button class="my_box_mod_btn">업데이트</button>
+                    <button id='b4' class="my_box_mod_btn">업데이트</button>
                 </div>
                 <hr>
                 <table class="grade_table">
@@ -146,14 +147,21 @@
             </div>
         </div>
     </div>
-
     
 
-    <!-- 내정보 업데이트 모달 -->
-    <div id='m1' class="modal" style="display: none;">
+    <!-- 1. 내정보 업데이트 모달 -->
+    <div id='m1' class="modal">
         <div class="update_modal_content">
-            <div class="close">&times;</div>
-            <div class="login_title" style="font-size:2rem; margin-top:1.7rem;">내 정보 업데이트</div>
+            <div id='c1' class="close">&times;</div>
+            <div class="login_title" style="font-size:2rem; margin-top:1.7rem;">
+                <span class="tooltip">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+                <div class="my_tooltip_text">
+                    <p>사용자의 대양휴머니티칼리지 사이트의 비밀번호는 업데이트시에만 사용되며 <span class="caution_info">저장되지 않습니다.</span></p>
+                </div>
+                내 정보 업데이트
+            </div>
             <div style="margin-top:0.5rem; font-size:0.9rem; color:rgb(199, 199, 199)">
                 대양휴머니티칼리지 사이트에 로그인하여 정보를 가져옵니다. (UIS사이트의 ID/PW와 동일)
             </div>
@@ -162,23 +170,23 @@
             <form action="" method="post">
                 <div class="regi_box">
                     <label style="text-align: center;">아이디</label>
-                    <input type="text" name="id" placeholder="ID">
+                    <input type="text" name="student_id" placeholder='15011187' style="background-color:rgb(248,249,250);" disabled>
                     <label style="text-align: center;">비밀번호</label>
                     <input type="password" name="pw" placeholder="PASSWORD">
                 </div>
-                <input onclick='' type='submit' class='login_btn' value='로그인' style="margin:2.5rem 0 2rem 0;">
+                <input onclick='pop_modal5()' type='submit' class='login_btn' value='로그인' style="margin:2.5rem 0 2rem 0;">
             </form>
         </div>
     </div>
 
-    <!-- 전공/영어 수정 모달 -->
-    <div id='m2' class="modal" style="display: none;">
+    <!-- 2. 전공/영어 수정 모달 -->
+    <div id='m2' class="modal">
         <div class="update_modal_content">
-            <div class="close">&times;</div>
+            <div id='c2' class="close">&times;</div>
             <div class="login_title" style="font-size:2rem; margin-top:1.7rem;">전공상태/영어인증 수정</div>
             <hr style="width:80%; margin-top:1.3rem;">
             <!-- 폼 -->
-            <form action="" method="post">
+            <form action="" method="post" name='form2' onsubmit="return check_up2()">
                 <div class="regi_box">
                     <label>전공상태</label>
                     <select name="major_status">
@@ -202,14 +210,14 @@
         </div>
     </div>
 
-    <!-- 비번 변경 모달 -->
-    <div id='m3' class="modal" style="display: none;">
+    <!-- 3. 비번 변경 모달 -->
+    <div id='m3' class="modal">
         <div class="update_modal_content">
-            <div class="close">&times;</div>
+            <div id='c3' class="close">&times;</div>
             <div class="login_title" style="font-size:2rem; margin-top:1.7rem;">비밀번호 변경</div>
             <hr style="width:80%; margin-top:1.3rem;">
             <!-- 폼 -->
-            <form action="" method="post">
+            <form action="" method="post" name='form3' onsubmit="return check_up3()">
                 <div class="regi_box">
                     <label>새 비밀번호</label>
                     <input id="pw1" type="password" name="password">
@@ -221,11 +229,22 @@
         </div>
     </div>
 
-    <!-- 기이수성적 업데이트 모달-->
-    <div id='m4' class="modal" style="display: none;">
+    <!-- 4. 기이수성적 업데이트 모달-->
+    <div id='m4' class="modal">
         <div class="update_modal_content">
-            <div class="close">&times;</div>
-            <div class="login_title" style="font-size:2rem; margin-top:1.7rem;">기이수성적 업로드</div>
+            <div id='c4' class="close">&times;</div>
+            <div class="login_title" style="font-size:2rem; margin-top:1.7rem;">
+                <span class="tooltip">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+                <div class="my_tooltip_text">
+                    <p>1. 사용자가 업로드하는 기이수성적 엑셀파일은 <span class="caution_info">즉시 삭제됩니다.</span></p>
+                    <p>2. 사용자가 들었던 과목 정보만이 머신러닝을 위한 용도로 데이터베이스로 변환하여 저장됩니다. </span></p>
+                    <p>3. 저장 시 성적 중 학점이 F, NP인 과목은 인정되지 않고 자동 삭제됩니다.</p>
+                </div>
+                기이수성적 업로드 
+            </div>
+            
             <hr style="width:80%; margin-top:1.3rem;">
             <div style="margin:1.5rem 0 2.5rem 0; ">
                 <p>
@@ -235,18 +254,85 @@
                     href="https://portal.sejong.ac.kr/jsp/login/uisloginSSL.jsp?rtUrl=uis.sejong.ac.kr/app/sys.Login.servj?strCommand=SSOLOGIN">UIS</a>)
                 </p>
                 <p>2. 왼쪽 메뉴바에서 수업/성적 -> 성적 및 강의평가 -> 기이수성적조회 로 이동합니다.</p>
-                <p>3. 성적엑셀다운로드 버튼을 클릭해 다운로드한 후, 해당 엑셀파일을 업로드합니다.</p> 
+                <p>3. 성적엑셀다운로드 버튼을 클릭해 다운로드한 후, 해당 엑셀파일을 업로드합니다.</p>
+                <p><span class="caution_info">※ 다운로드받은 파일 그대로 업로드해야합니다.</span></p>
             </div>
             
-            <form action="" method="post">
-                <div class="regi_box" >
-                    <input type = "file" name = "" accept = ".xls">
+            <form action="" method="post" name='form4' onsubmit="return check_up4()">
+                <div class="box-file-input">
+                    <label>
+                        <input id="file_input" type="file" name="" class="file-input" accept=".xls">
+                    </label>
+                    <span class="filename">파일을 선택해주세요.</span>
                 </div>
-                <input onclick='' type='submit' class='login_btn' value='업로드' style="margin:3.5rem 0 2rem 0;">
+                <input type='submit' class='login_btn' value='업로드' style="margin:2.5rem 0 2rem 0;">
             </form>
         </div>
     </div>
 
+    <!-- 로그인시 로딩 모달 창 -->
+<div id='m5' class="modal">
+    <div class="load-modal-content">
+        <div class="modal_loadcontainer">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+            <div class="loading">
+                <span>로</span>
+                <span>그</span>
+                <span>인</span>
+                <span>정</span>
+                <span>보</span>
+                <span>확</span>
+                <span>인</span>
+                <span>중</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </div>
+            <div class="load_info">
+                5초 정도 소요됩니다. 창을 이동하지 마세요!
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 엑셀 업로드시 로딩 모달 창 -->
+<div id='m6' class="modal">
+    <div class="load-modal-content">
+        <div class="modal_loadcontainer">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+            <div class="loading">
+                <span>데</span>
+                <span>이</span>
+                <span>터</span>
+                <span>업</span>
+                <span>로</span>
+                <span>드</span>
+                <span>중</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </div>
+            <div class="load_info">
+                5초 정도 소요됩니다. 창을 이동하지 마세요!
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -275,8 +361,143 @@
 </body>
 
 <script>
+    // 로그인 클릭시 modal 띄움
+    function pop_modal5(){
+        document.getElementById('m5').style.display = "block";
+    }
+    // 업로드 클릭시 modal 띄움
+    function pop_modal6(){
+        document.getElementById('m6').style.display = "block";
+    }
 
-</script>
+    // 영어성적 입력 띄우기
+    function pop_score(){
+        var eng_box = document.getElementById('eng');
+        var eng_ind = document.getElementById("eng").options.selectedIndex;
+        if(eng_box.options[eng_ind].value !== "x")
+        {
+            document.getElementById('eng_score').style.display = "block";
+        }
+        else{
+            document.getElementById('eng_score').style.display = "none";
+        }
+    }
+
+    // 영어 선택해놓고 점수 안쓰면 빠꾸
+    function check_up2(){
+        var eng_box = document.getElementById('eng');
+        var eng_ind = document.getElementById("eng").options.selectedIndex;
+        if(eng_box.options[eng_ind].value !== "x"){
+            if(!document.getElementById('eng_score').value){
+                alert('영어 점수를 입력해주세요.') ;
+                form2.eng_score.focus();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // 비번 안쓰거나 일치안하면 빠꾸
+    function check_up3(){
+        if(!document.getElementById('pw1').value){
+            alert('비밀번호를 입력해주세요.') ;
+            form3.pw1.focus();
+            return false;
+        }
+        if(document.getElementById('pw1').value !== document.getElementById('pw2').value){
+            alert('비밀번호가 일치하지 않습니다.') ;
+            form3.pw1.focus();
+            return false;
+        }
+        return true;
+    }
+
+    // 파일 업로드 안하고 버튼 누르면 빠꾸
+    function check_up4(){
+        if(!document.getElementById("file_input").value){
+            alert("엑셀파일을 첨부해주세요!");
+            return false;
+        }
+        pop_modal6();
+        return true;
+    }
+
+    // 파일 업로드 css - jquery 적용
+    $(document).on("change", ".file-input", function(){
+        $filename = $('input[type=file]').val().replace(/.*(\/|\\)/, '');
+        if($filename == "")
+          $filename = "파일을 선택해주세요.";
+        $(".filename").text($filename);
+    })
+
+    // 모달 창 켜기
+    var Btnclick = function (x, y) {
+        x.onclick = function () {
+            y.style.display = "block";
+        }
+    }
+    // 모달 창 끄기
+    var Spanclick = function (x, y) {
+        x.onclick = function () {
+            y.style.display = "none";
+        }
+    }
+    // 모달 켜는 버튼 id
+    var b1 = document.getElementById("b1");     // 1. 내 정보 업데이트
+    var b2 = document.getElementById("b2");     // 2. 영어+전공상태 수정
+    var b3 = document.getElementById("b3");     // 3. 비번 변경
+    var b4 = document.getElementById("b4");     // 4. 기이수성적 업로드
+    // 모달 id
+    var m1 = document.getElementById('m1');     
+    var m2 = document.getElementById('m2');     
+    var m3 = document.getElementById('m3');     
+    var m4 = document.getElementById('m4');     
+    // 모달 끄는 버튼(X) id
+    var c1 = document.getElementById("c1");
+    var c2 = document.getElementById("c2");
+    var c3 = document.getElementById("c3");
+    var c4 = document.getElementById("c4");
+    // 모달 키는 함수 호출
+    Btnclick(b1, m1);
+    Btnclick(b2, m2);
+    Btnclick(b3, m3);
+    Btnclick(b4, m4);
+    // 모달 끄는 함수 호출
+    Spanclick(c1, m1);
+    Spanclick(c2, m2);
+    Spanclick(c3, m3);
+    Spanclick(c4, m4);
+    // 모달 밖 화면 누를때 꺼지게하기
+    window.onclick = function (event) {
+        if (event.target == m1) {
+            m1.style.display = "none";
+        }
+        if (event.target == m2) {
+            m2.style.display = "none";
+        }
+        if (event.target == m3) {
+            m3.style.display = "none";
+        }
+        if (event.target == m4) {
+            m4.style.display = "none";
+        }
+    }
+
+    // 툴팁
+    let tooltipeb = document.querySelectorAll('.tooltip');
+    let text = document.querySelectorAll('.my_tooltip_text');
+    var Tooltipeb = function (x, y) {
+        x.addEventListener('click', () => {
+            y
+                .classList
+                .toggle('active');
+        });
+    }
+    for (i = 0; i < 8; i++) {
+        Tooltipeb(tooltipeb[i], text[i]);
+    }
+    
+</script>   
 
 
 </html>

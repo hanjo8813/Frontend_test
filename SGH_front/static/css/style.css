@@ -44,7 +44,7 @@ a {
 
 .navbar_menu li {
     padding: 8px 20px;
-    margin-right: 35px;
+    margin-right: 0.8rem;
     cursor: pointer;
 }
 
@@ -218,7 +218,7 @@ body:not(.device-touch) .bg_btn_style {
 .login_box{
     text-align:center;
     margin: 0 auto; 
-    width:75%;
+    width:60%;
     margin-top:1.5rem;
     border:0.001px solid rgb(216, 216, 216);
     background-color: white; 
@@ -287,7 +287,8 @@ body:not(.device-touch) .bg_btn_style {
 
 .login_btn:hover,
 .regi_btn:hover,
-.go_result_btn:hover
+.go_result_btn:hover,
+.suc_btn:hover
 {
     background-color: #FEC034;
     font-weight: bold;
@@ -295,7 +296,8 @@ body:not(.device-touch) .bg_btn_style {
 
 body:not(.device-touch) .login_btn,
 body:not(.device-touch) .regi_btn,
-body:not(.device-touch) .go_result_btn
+body:not(.device-touch) .go_result_btn,
+body:not(.device-touch) .suc_btn
 {
     transition: background-color .2s linear;
     -webkit-transition: background-color .2s linear;
@@ -309,7 +311,6 @@ body:not(.device-touch) .go_result_btn
 }
 
 /* ---------------------------------( agree )---------------------------------------- */
-
 
 .info_title{
     font-size : 1.8rem;
@@ -403,10 +404,9 @@ body:not(.device-touch) .go_result_btn
 
 /* ---------------------------------( register )---------------------------------------- */
 
-
 .regi_box {
     margin: 0 auto; 
-    width: 45%;
+    width: 38%;
     height: auto;
     overflow: hidden;
     display: flex;
@@ -458,6 +458,56 @@ body:not(.device-touch) .go_result_btn
     outline: 0;
     margin-top:2.5rem;
     margin-bottom: 3rem;
+}
+
+/* ---------------------------------( success )---------------------------------------- */
+
+.suc_container{
+    padding-top:8rem;
+    padding-bottom:10rem;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(248,249,250);
+}
+
+.suc_container i{
+    color:rgb(124,199,106);
+    font-size:7rem;
+}
+
+.suc_container span{
+    color:rgb(164, 26, 55);
+}
+
+.suc_content1{
+    margin-top:4rem;
+    letter-spacing:1px;
+    font-size:2.5rem;
+}
+
+.suc_content2{
+    font-weight: lighter;
+    margin-top:0.8rem;
+    font-size:1.5rem; 
+    color:rgb(199, 199, 199)
+}
+
+.suc_btn{
+    background: rgb(164, 26, 55);
+    width:15%;  
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    margin-top: 1.5rem;
+    border-radius: 3px;
+    padding:0.7rem;
+    cursor: pointer;
+    outline: 0;
+    margin-top:4rem;
 }
 
 /* ---------------------------------( mypage 이동 버튼)---------------------------------------- */
@@ -564,7 +614,6 @@ body:not(.device-touch) .go_result_btn
 
 /* ---------------------------------( mypage 기이수성적 )---------------------------------------- */
 
-
 .my_box_grade{
     display: flex;
     flex-direction: column;
@@ -600,6 +649,43 @@ body:not(.device-touch) .go_result_btn
 }
 
 
+/* https://ingijjung.tistory.com/11 파일 업로드 css */
+
+.box-file-input {
+    background-color: rgb(248,249,250);
+    padding:1rem ;
+    margin:0 auto;
+    width:60%;
+    border:1px solid rgb(216, 216, 216);
+}
+
+.box-file-input span{
+    font-size:1.1rem;
+    font-weight: bold;
+}
+
+.box-file-input label{
+    display:inline-block;
+    background:#424242;
+    border-radius: 3px;
+    color:white;
+    padding:0px 15px;
+    line-height:35px;
+    cursor:pointer;
+}
+  
+.box-file-input label:after{
+    content:"파일선택";
+}
+  
+.box-file-input .file-input{
+    display:none;
+}
+  
+.box-file-input .filename{
+    display:inline-block;
+    padding-left:10px;
+}
 
 /* ---------------------------------( result )---------------------------------------- */
 
@@ -787,29 +873,6 @@ strong {
     font-size: 18px;
 }
 
-.tooltip {
-    cursor: pointer;
-}
-
-.tooltip_text{
-    background-color: #FAFAFA;
-    bottom: 2.5rem;
-    left: -150px;
-    width: 400px;
-    height: auto;
-    box-shadow: 3px 3px 5px black;
-    padding: 17px;
-    color: black;
-    border-color: lightgrey;
-    border-style: solid;
-    border-width: 1.5px;
-    display: none;
-    letter-spacing: 0.7px;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    position: absolute;
-}
-
 .r {
     width: 50px;
 }
@@ -863,14 +926,9 @@ strong {
 
 }
 
-.tooltip_text.active {
-    display: block;
-}
 .name title {
     font-size: 50px;
 }
-
-
 
 .Gbox {
     display: flex;
@@ -1006,7 +1064,6 @@ strong {
     height: auto;
 }
 
-
 .modal_div {
     padding: 1rem;
     display : flex;
@@ -1041,6 +1098,53 @@ strong {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* ---------------------------------( 툴팁 )---------------------------------------- */
+
+
+.tooltip {
+    cursor: pointer;
+}
+
+.tooltip_text{
+    background-color: #FAFAFA;
+    bottom: 2.5rem;
+    left: -150px;
+    width: 400px;
+    height: auto;
+    box-shadow: 3px 3px 5px black;
+    padding: 17px;
+    color: black;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: 1.5px;
+    display: none;
+    letter-spacing: 0.7px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    position: absolute;
+}
+
+.my_tooltip_text.active,
+.tooltip_text.active {
+    display: block;
+}
+
+.my_tooltip_text{
+    background-color: white;
+    margin:0 auto;
+    z-index: 2;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    color: black;
+    border:1px solid rgb(163, 163, 163);
+    border-radius: 20px;
+    display: none;
+    font-size: 0.9rem;
+    position: fixed;
+}
+
 
 /* ---------------------------------( loading )---------------------------------------- */
 
