@@ -147,6 +147,8 @@
             </div>
         </div>
     </div>
+
+    <button id="me">ddd</button>
     
 
     <!-- 1. 내정보 업데이트 모달 -->
@@ -174,7 +176,7 @@
                     <label style="text-align: center;">비밀번호</label>
                     <input type="password" name="pw" placeholder="PASSWORD">
                 </div>
-                <input onclick='pop_modal5()' type='submit' class='login_btn' value='로그인' style="margin:2.5rem 0 2rem 0;">
+                <input onclick='pop_modal5()' type='button' class='login_btn' value='로그인' style="margin:2.5rem 0 2rem 0;">
             </form>
         </div>
     </div>
@@ -272,8 +274,8 @@
 
     <!-- 로그인시 로딩 모달 창 -->
 <div id='m5' class="modal">
-    <div class="load-modal-content">
-        <div class="modal_loadcontainer">
+    <div id="m_con" class="load-modal-content">
+        <div  class="modal_loadcontainer">
             <div class="sk-chase">
                 <div class="sk-chase-dot"></div>
                 <div class="sk-chase-dot"></div>
@@ -365,6 +367,7 @@
     function pop_modal5(){
         document.getElementById('m5').style.display = "block";
     }
+
     // 업로드 클릭시 modal 띄움
     function pop_modal6(){
         document.getElementById('m6').style.display = "block";
@@ -429,6 +432,7 @@
           $filename = "파일을 선택해주세요.";
         $(".filename").text($filename);
     })
+
 
     // 모달 창 켜기
     var Btnclick = function (x, y) {

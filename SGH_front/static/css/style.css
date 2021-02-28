@@ -15,6 +15,12 @@ a {
     color: black;
 }
 
+/* 아이폰에서 input css 적용하기 */
+input {
+    -webkit-appearance: none;
+ }
+
+
 
 /* ---------------------------------( ref - 메뉴바 )---------------------------------------- */
 
@@ -1026,7 +1032,7 @@ strong {
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    height: 100vh; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -1149,7 +1155,8 @@ strong {
 /* ---------------------------------( loading )---------------------------------------- */
 
 .modal_loadcontainer{
-    height: 50vh;
+    padding-top:3rem;
+    padding-bottom:3rem;
     width: 100%;
     font-weight: 700;
     font-size: 32px;
