@@ -47,7 +47,7 @@ function ImageUploadForm(props) {
     return (
         <div >
 
-            <h2>이미지 업로드 테스트</h2>
+            <h2>이미지 업로드 테스트 (Form)</h2>
             <hr /><br />
             <br />
             <input type="file" onChange={fileHandler} />
@@ -55,7 +55,7 @@ function ImageUploadForm(props) {
             <br /><br />
             <button onClick={sendFile}>전송</button>
 
-            <br /><br />
+            <br /><br /><hr/>
 
             <img src={imageUrl} alt="이미지" />
 
